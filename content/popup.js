@@ -93,6 +93,108 @@ function resetDate() {
     setTimeout(() => {
         document.body.removeChild(daysElement)
     }, 3000);
+// Initialize buttons
+
+let showDays = document.getElementById("showDays");
+let changeDate = document.getElementById("changeDate");
+
+
+// When the button is clicked, inject showDaysLeft and resetDate into current page
+
+showDays.addEventListener("click", async () => {
+
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    chrome.scripting.executeScript({
+
+        target: { tabId: tab.id },
+
+        function: showDaysLeft,
+
+    });
+
+});
+changeDate.addEventListener("click", async () => {
+
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    chrome.scripting.executeScript({
+
+        target: { tabId: tab.id },
+
+        function
+// Initialize buttons
+
+let showDays = document.getElementById("showDays");
+let changeDate = document.getElementById("changeDate");
+
+
+// When the button is clicked, inject showDaysLeft and resetDate into current page
+
+showDays.addEventListener("click", async () => {
+
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    chrome.scripting.executeScript({
+
+        target: { tabId: tab.id },
+
+        function: showDaysLeft,
+
+    });
+
+});
+changeDate.addEventListener("click", async () => {
+
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    chrome.scripting.executeScript({
+
+        target: { tabId: tab.id },
+
+        function: resetDate,
+
+    });
+
+});: resetDate,
+
+    });
+
+});
+// Initialize buttons
+
+let showDays = document.getElementById("showDays");
+let changeDate = document.getElementById("changeDate");
+
+
+// When the button is clicked, inject showDaysLeft and resetDate into current page
+
+showDays.addEventListener("click", async () => {
+
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    chrome.scripting.executeScript({
+
+        target: { tabId: tab.id },
+
+        function: showDaysLeft,
+
+    });
+
+});
+changeDate.addEventListener("click", async () => {
+
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    chrome.scripting.executeScript({
+
+        target: { tabId: tab.id },
+
+        function: resetDate,
+
+    });
+
+});
 
 
 }
